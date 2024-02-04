@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
                 rel="noreferrer"
                 className="list__link"
                 target="_blank"
-                to="https://www.linkedin.com/in/%D0%B2%D1%96%D1%82%D0%B0%D0%BB%D1%96%D0%B9-%D1%84%D0%B5%D0%B4%D1%83%D1%81%D0%BE%D0%B2-9a23892a2/"
+                to="https://www.linkedin.com/in/vitalii-fedusov-9a23892a2/"
               >
                 Contacts
               </NavLink>

@@ -1,7 +1,7 @@
 # Phone catalog
 Product catalog implemented according to [figma design](https://www.figma.com/file/uEetgWenSRxk9jgiym6Yzp/Phone-catalog-redesign?type=design&node-id=1-2&mode=design&t=GXkaWm3zHbOntqqP-0)
 
-To see a demo click [here](https://vitalii-fedusov.github.io/the-MET-museum-landing/)
+To see a demo click [here](https://vitalii-fedusov.github.io/Product-catalog/)
 ### Technologies
 1. HTML5
 2. SCSS

@@ -1,37 +1,38 @@
 import logo from '../../images/logo.svg';
 import arrowUp from '../../images/arrow-up.svg';
+import { NavLink } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="footer__container">
         <div className="footer__nav">
-          <a href="/">
+          <NavLink to="/home">
             <img className="logo" src={logo} alt="Logo" />
-          </a>
+          </NavLink>
           <ul className="list">
             <li className="list__item">
-              <a
+              <NavLink
                 className="list__link"
                 target="_blank"
                 rel="noreferrer"
-                href="https://github.com/vitalii-fedusov?tab=repositories"
+                to="https://github.com/vitalii-fedusov?tab=repositories"
               >
                 Github
-              </a>
+              </NavLink>
             </li>
             <li className="list__item">
-              <a
+              <NavLink
                 rel="noreferrer"
                 className="list__link"
                 target="_blank"
-                href="https://www.linkedin.com/in/%D0%B2%D1%96%D1%82%D0%B0%D0%BB%D1%96%D0%B9-%D1%84%D0%B5%D0%B4%D1%83%D1%81%D0%BE%D0%B2-9a23892a2/"
+                to="https://www.linkedin.com/in/%D0%B2%D1%96%D1%82%D0%B0%D0%BB%D1%96%D0%B9-%D1%84%D0%B5%D0%B4%D1%83%D1%81%D0%BE%D0%B2-9a23892a2/"
               >
                 Contacts
-              </a>
+              </NavLink>
             </li>
             <li className="list__item">
-              <a className="list__link" href="/">Rights</a>
+              <NavLink className="list__link" to="/home">Rights</NavLink>
             </li>
           </ul>
           <div className="footer__button-up">

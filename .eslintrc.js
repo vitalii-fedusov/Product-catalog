@@ -9,7 +9,7 @@ module.exports = {
     'react/prop-types': 0,
     'react/self-closing-comp': 0,
     'react/display-name': 0,
-    'import/no-unresolved': [2, { 'devDependencies': true }],
+    'import/no-unresolved': [0, { 'devDependencies': true, 'caseSensitive' :true }],
 
     // JavaScript
     semi: 0,

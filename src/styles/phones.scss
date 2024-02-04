@@ -1,0 +1,57 @@
+.phones {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin-bottom: 8px;
+    @include h1;
+
+    &--mb-40px {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__paragraph {
+    @include bodyText;
+    color: $gray-secondary;
+    margin-bottom: 40px;
+  }
+
+  &__prev-page {
+    color: $gray-primary;
+    text-decoration: none;
+    font-weight: bold;
+    color: $gray-primary;
+
+    @include smallText;
+    @include hoverScale;
+  }
+}
+
+.path {
+  @include smallText;
+  color: $gray-secondary;
+  line-height: 16px;
+}
+
+.phones-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  column-gap: 16px;
+}
+
+.left-back {
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  width: min-content;
+  display: flex;
+  color: $gray-secondary;
+  gap: 4px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 12px;
+
+  @include hoverScale;
+}

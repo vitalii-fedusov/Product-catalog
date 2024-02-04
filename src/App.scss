@@ -1,3 +1,145 @@
-.starter {
-  font-size: 18px;
+@import './styles/variables.scss';
+@import '../src/styles/utils/mixins.scss';
+@import './styles/Header.scss';
+@import './styles/Footer.scss';
+@import './styles/container.scss';
+@import './styles/card.scss';
+@import './styles/swiper.scss';
+@import './styles/slick.scss';
+@import './styles/category.scss';
+@import './styles/icons.scss';
+@import './styles/path.scss';
+@import './styles/phones.scss';
+@import './styles/pagination.scss';
+@import './styles/details.scss';
+@import './styles/CartPage.scss';
+
+@font-face {
+  font-family: Mont;
+  src: url(./assets/fonts/Mont-Regular.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Mont;
+  src: url(./assets/fonts/Mont-SemiBold.otf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Mont;
+  src: url(./assets/fonts/Mont-Bold.otf);
+  font-weight: bold;
+}
+
+iframe {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: Mont;
+  color: $gray-primary;
+
+  // display: grid;
+  // grid-template-rows: 96px 1fr 96px;
+  // row-gap: 80px;
+  // height: 100%;
+  min-height: 100vh;
+}
+
+.tablets, .phones {
+  display: flex;
+  flex-direction: column;
+  margin-top: -26px;
+
+  &__header {
+    margin-bottom: 48px;
+  }
+}
+
+.loader {
+  height: 576px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  grid-column: span 6;
+  margin-bottom: 40px;
+}
+
+.dropdowns-container {
+  height: 40px;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  column-gap: 16px;
+  margin-bottom: 50px;
+}
+
+.option-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $gray-secondary;
+  z-index: 2;
+}
+
+.dropdown {
+  grid-column: span 4;
+
+  &--per-page {
+    grid-column: span 3;
+  }
+
+  &__name {
+    @include bodyText;
+    color: $gray-secondary;
+    margin-bottom: 4px;
+  }
+
+  &__button {
+    height: 40px;
+    width: 100%;
+    background-color: $white;
+    text-decoration: none;
+    color: $gray-primary;
+    @include buttonsText;
+
+    &--select {
+      background-image: url('../src/images/arrow-down.svg');
+      background-repeat: no-repeat;
+      background-position: right;
+      margin-bottom: 4px;
+      @include buttonBorder;
+    }
+
+    &--focused {
+      background-image: url('../src/images/arrow-up-secondary.svg');
+    }
+
+    &--option {
+      color: $gray-secondary;
+      padding-left: 12px;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        background-color: $bg-white;
+        color: $gray-primary;
+      }
+    }
+  }
+}
+
+.go-home {
+  background-image: url('../src/images/home.svg');
+  height: 16px;
+  width: 16px;
+
+  @include hoverScale;
 }

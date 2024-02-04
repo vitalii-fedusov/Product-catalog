@@ -1,0 +1,27 @@
+import { Link, LinkProps, useSearchParams } from 'react-router-dom';
+import { getSearchWith, SearchParams } from '../../helpers/utils/seacrhHelper';
+
+type Props = Omit<LinkProps, 'to'> & {
+  params: SearchParams,
+  // getLinkClass: string,
+};
+
+export const SearchLink: React.FC<Props> = ({
+  children,
+  params,
+  // getLinkClass,
+  ...props
+}) => {
+  const [searchParams] = useSearchParams();
+
+  return (
+    <Link
+      to={{
+        search: getSearchWith(searchParams, params),
+      }}
+      {...props}
+    >
+      {children}
+    </Link>
+  );
+};

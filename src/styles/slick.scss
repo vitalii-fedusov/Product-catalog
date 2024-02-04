@@ -1,0 +1,65 @@
+.card-container {
+  position: relative;
+}
+
+.slick-title {
+  margin-bottom: 24px;
+}
+
+.slick-slide > div {
+  margin: 0 8px;
+}
+
+.slick-arrow {
+  background: blue !important;
+  position: absolute !important;
+  width: 32px !important;
+  height: 32px !important;
+  border: 1px solid $gray-secondary !important;
+  transition: border-color $effect-duration $animation-timing-function;
+  background-color: #fff !important;
+
+  &:hover {
+    border-color: $gray-primary !important;
+  }
+}
+
+.slick-prev {
+  left: auto !important;
+  top: -48px !important;
+  right: 48px !important;
+  background-image: url('../../src/images/arrow-left-black.svg') !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+
+  &::before {
+    content: "" !important;
+  }
+}
+
+.slick-next {
+  right: 0 !important;
+  top: -48px !important;
+  background-image: url('../../src/images/arrow-right-black.svg') !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+
+  &::before {
+    content: "" !important;
+  }
+}
+
+.slick-prev.slick-disabled {
+  background-image: url('../../src/images/arrow-left.svg') !important;
+}
+
+.slick-next.slick-disabled {
+  background-image: url('../../src/images/arrow-right-secondary-color.svg') !important;
+}
+
+.slick-disabled {
+  &:hover {
+    border-color: $gray-secondary !important;
+    cursor: no-drop;
+  }
+}

@@ -1,0 +1,80 @@
+@mixin buttonBorder {
+  border: 1px solid $gray-secondary;
+    transition: border-color $effect-duration $animation-timing-function;
+
+    &:hover {
+      border-color: $gray-primary;
+    }
+}
+
+@mixin onTablet {
+  @media (max-width: $min-desctop-width) {
+    @content;
+  }
+}
+
+@mixin onMobile {
+  @media (max-width: $min-tablet-width) {
+    @content;
+  }
+}
+
+@mixin pageGrid {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  column-gap: 16px;
+
+  @include onTablet {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  @include onMobile {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@mixin h1 {
+  font-weight: bold;
+  line-height: 41px;
+  font-size: 32px;
+  letter-spacing: -0.01em;
+}
+
+@mixin h2 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 140%;
+}
+
+@mixin h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@mixin buttonsText {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+}
+
+@mixin smallText {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: normal;
+}
+
+@mixin bodyText {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+}
+
+@mixin hoverScale {
+  transition: transform $effect-duration $animation-timing-function;
+
+  &:hover {
+    transform: scale($scale-value);
+  }
+}
+

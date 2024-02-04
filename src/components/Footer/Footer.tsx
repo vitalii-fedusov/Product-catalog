@@ -1,6 +1,6 @@
+import { NavLink } from 'react-router-dom';
 import logo from '../../images/logo.svg';
 import arrowUp from '../../images/arrow-up.svg';
-import { NavLink } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
   return (
